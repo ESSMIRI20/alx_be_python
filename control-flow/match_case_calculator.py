@@ -1,8 +1,6 @@
 n1 = float(input("Enter the first number:"))
 n2 = float(input("Enter the second number:"))
-c = input("Choose the operation (+, -, *, /):")
-
-match c :
+match input("Choose the operation (+, -, *, /):"):
     case "+" :
         print("The result is {}.".format(n1 + n2))
     case "-" :
