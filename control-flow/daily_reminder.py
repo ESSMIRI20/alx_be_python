@@ -1,31 +1,39 @@
+task = input("Enter your task: ")
 
-task = input("Enter your task: ").strip()
+priority = input("Priority (high/medium/low): ")
 
-while True:
-    priority = input("Priority (high/medium/low): ").strip().lower()
-    if priority in ['high', 'medium', 'low']:
-        break
-    else:
-        print("Invalid priority level. Please enter 'high', 'medium', or 'low'.")
-
-while True:
-    time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
-    if time_bound in ['yes', 'no']:
-        break
-    else:
-        print("Invalid input. Please enter 'yes' or 'no'.")
+time_bound = input("Is it time-bound? (yes/no): ")
 
 match priority:
     case 'high':
         reminder = f"'{task}' is a high priority task"
+        if time_bound == 'yes':
+            reminder += " that requires immediate attention today!"
+            print(f"Reminder: {reminder}")
+        elif time_bound == 'no':
+            reminder += ". Consider completing it when you have free time."
+            print(f"Note: {reminder}")
+        else:
+            print("invalid input")
     case 'medium':
         reminder = f"'{task}' is a medium priority task"
+        if time_bound == 'yes':
+            reminder += " that requires immediate attention today!"
+            print(f"Reminder: {reminder}")
+        elif time_bound == 'no':
+            reminder += ". Consider completing it when you have free time."
+            print(f"Note: {reminder}")
+        else:
+            print("invalid input")
     case 'low':
         reminder = f"'{task}' is a low priority task"
-
-if time_bound == 'yes':
-    reminder += ". that requires immediate attention today!"
-else:
-    reminder += ". Consider completing it when you have free time."
-
-print(f"\nReminder: {reminder}")
+        if time_bound == 'yes':
+            reminder += " that requires immediate attention today!"
+            print(f"Reminder: {reminder}")
+        elif time_bound == 'no':
+            reminder += ". Consider completing it when you have free time."
+            print(f"Note: {reminder}")
+        else:
+            print("invalid input")
+    case _:
+        print("invalid input")
