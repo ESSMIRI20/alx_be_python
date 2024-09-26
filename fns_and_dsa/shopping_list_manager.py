@@ -19,7 +19,8 @@ def main():
             a = input(("what's the item you need to remove it :"))
             shopping_list.remove(a)
         elif choice == '3':
-            print(shopping_list)
+            for i in range(len(shopping_list)):
+                print(shopping_list[i])
         elif choice == '4':
             print("Goodbye!")
             break
