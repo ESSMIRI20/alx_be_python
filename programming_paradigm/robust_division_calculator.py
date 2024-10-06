@@ -1,7 +1,7 @@
 def safe_divide(numerator, denominator):
     try:
-        num1 = int(numerator)
-        num2 = int(denominator)
+        num1 = float(numerator)
+        num2 = float(denominator)
         if num2 != 0:
             return f"The result of the division is {num1 / num2}"
         else:
