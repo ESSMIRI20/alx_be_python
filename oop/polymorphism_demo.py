@@ -6,6 +6,8 @@ class Shape:
         self.radius = radius
 
 class Rectangle(Shape):
+    def __init__(self, length, width):
+        super().__init__(length, width)
     def area(self):
         return self.lenght * self.width
 
