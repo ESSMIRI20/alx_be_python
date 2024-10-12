@@ -7,7 +7,7 @@ class Shape:
 
 class Rectangle(Shape):
     def __init__(self, length, width):
-        super().__init__(length, width)
+        super().__init__(length = length, width = width)
     def area(self):
         return self.lenght * self.width
 
